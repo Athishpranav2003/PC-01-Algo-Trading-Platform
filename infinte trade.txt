@@ -24,28 +24,16 @@ int main() {
 	      sell=A[day];
 	      profit+=sell-buy;
       }
-      else if(day==n-1 && buy==0)
-      {
-	      break;
-      }
-      else if(A[day+1]>A[day] and buy==0)
-      {
-	      buy=A[day];	
-      }
+      else if(day==n-1 && buy==0) break;
+      else if(A[day+1]>A[day] and buy==0) buy=A[day];
       else if(A[day+1]<A[day] and buy!=0)
       {
-	      sell=A[day];
-	      
+	      sell=A[day];	      
 	      profit+=sell-buy;
-        sell=0;
-        buy=0;
-        
+              sell=0;
+              buy=0;        
       }
-      day++;
-       
+      day++;       
     }
   cout<<profit<<endl;
-  
-	  
-
 }
